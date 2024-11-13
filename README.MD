@@ -8,29 +8,36 @@ git clone https://github.com/larson-carter/CSCI325-PROJECT3 && cd CSCI325-PROJEC
 
 ## Install Pre-Reqs
 
-`chmod +x install_dependencies.sh && ./install_dependencies.sh`
+```
+chmod +x install_dependencies.sh && ./install_dependencies.sh && chmod +x *.sh
+```
 
-## Make all shell scripts executable
+## Setup Everything
 
-`chmod +x *.sh`
-
+```
+./ufw_setup.sh && ./snort_setup.sh
+```
 
 ## UFW Part
 
-`./ufw_setup.sh`
-
-`sudo ufw status verbose | tee 'LASTNAME'Project3UFW.txt`
+```
+sudo ufw status verbose | tee 'LASTNAME'Project3UFW.txt
+```
 
 ## Snort Part
 
-`./snort_setup.sh`
-
-`sudo snort -v -c /etc/snort/snort.conf | tee 'LASTNAME'Project3SNORT.txt`
+```
+sudo snort -v -c /etc/snort/snort.conf | tee 'LASTNAME'Project3SNORT.txt
+```
 
 ## Ping
 
-`ping -c 4 turing.cs.olemiss.edu`
+```
+ping -c 4 turing.cs.olemiss.edu
+```
 
 ## NMAP
 
-`sudo nmap -v -O turing.cs.olemiss.edu | tee 'LASTNAME'Project3NMAP.txt`
+```
+sudo nmap -v -O turing.cs.olemiss.edu | tee 'LASTNAME'Project3NMAP.txt
+```
